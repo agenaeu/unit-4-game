@@ -1,3 +1,9 @@
+.bgImage {
+    background-image: url(/assets/images/bgimage.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    margin: 0px;
+}
 #amethyst {
     width: 200px;
     height: 200px;
@@ -10,12 +16,16 @@
     width: 200px;
     height: 200px;
 }
-h1 {
+#div3 {
+    padding: 0px;
+}
+.col-lg-5 {
     background-color: orange;
 }
-p {
-    background-color: tan;
+h1 {
+    text-indent: 0px;
 }
+
 br {
     background-color: tan;
 }
@@ -24,4 +34,30 @@ br {
 }
 p {
     color: green;
+}
+.col-lg-4 .col-lg-3 .col-lg-6 {
+    padding: 0px;
+}
+h3 {
+    /* background-color: olivedrab; */
+    padding: 0px, 0px, 0px, 0px;
+    background-color: olivedrab;
+    margin: 0px;
+   /*  text-indent: 15px; */
+}
+
+#wins {
+    background-color: aqua;
+}
+#losses {
+    background-color: aqua;
+    
+}
+
+img {
+    background-color: white;
+}
+#score {
+    background-color: seagreen;
+    margin: 15px;
 }

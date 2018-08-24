@@ -1,6 +1,6 @@
 //on load function
 $(document).ready(function() {
-    
+    alert("Click a crystal to start!");
     // global variables
     var score = 0;
     var wins = 0;
@@ -12,6 +12,7 @@ $(document).ready(function() {
     // sets random number to try and reach
     var randomNum = Math.floor((Math.random()*102)+19);
     // makes the crystals unable to = the same number as each other
+      
     if (amethystNum === sapphireNum || amethystNum === emeraldNum) {
         sapphireNum = Math.floor((Math.random()*12)+1);
         emeraldNum = Math.floor((Math.random()*12)+1);  
