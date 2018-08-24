@@ -10,3 +10,18 @@
     width: 200px;
     height: 200px;
 }
+h1 {
+    background-color: orange;
+}
+p {
+    background-color: tan;
+}
+br {
+    background-color: tan;
+}
+.paragraph {
+    background-color: tan;
+}
+p {
+    color: green;
+}
