@@ -7,9 +7,10 @@
         crossorigin="anonymous">
     <link href="/assets/css/style.css" rel="stylesheet">
     <script
-        src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-        crossorigin="anonymous"></script>
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+        <script src="/assets/javascript/game.js"></script>
     <title>Crystal Collector</title>
 </head>
 
@@ -32,25 +33,30 @@
             <br>
             <p>Each time when the game starts, the game will change the values of each crystal.</p>
         </div>
-        <div id="randomNumber" class="row">
-            <div class="col-lg-4">
-                <h3>Random Number</h3>
+        <div class="row">
+    
+            <div id="randomNum" class="col-lg-6">
+                
             </div>
-            <div class="col-lg-1">
+            <div class="col-lg-6">
                 <h6>Wins: </h6>
                 <h6>Losses: </h6>
             </div>
+            
         </div>
-        <div class="row">
-            <div class="col-lg-4">
-                <img><img><img>
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-lg-3">
-                <p>Your total score is:</p>
+                <img id="amethyst" src="/assets/images/amethyst.jpg" alt="amethyst">
+            </div>
+            <div class="col-lg-3">
+                <img id="sapphire" src="/assets/images/sapphire.jpg" alt="sapphire">
+            </div>
+            <div class="col-lg-3">
+                <img id="emerald" src="/assets/images/emerald.jpg" alt="emerald">
             </div>
         </div>
+      
         <div class="row">
             <div id="score" class="col-lg-3">
                 <!-- score goes here -->
