@@ -9,16 +9,23 @@ $(document).ready(function() {
     var amethystNum = Math.floor((Math.random()*12)+1);
     var sapphireNum = Math.floor((Math.random()*12)+1);
     var emeraldNum = Math.floor((Math.random()*12)+1);
+    var diamondNum = Math.floor((Math.random()*12)+1);
     // sets random number to try and reach
     var randomNum = Math.floor((Math.random()*102)+19);
     // makes the crystals unable to = the same number as each other
       
-    if (amethystNum === sapphireNum || amethystNum === emeraldNum) {
+    if (amethystNum === sapphireNum || amethystNum === emeraldNum || amethystNum === diamondNum) {
         sapphireNum = Math.floor((Math.random()*12)+1);
-        emeraldNum = Math.floor((Math.random()*12)+1);  
+        emeraldNum = Math.floor((Math.random()*12)+1);
+        diamondNum = Math.floor((Math.random()*12)+1);  
     }
-    if (sapphireNum === emeraldNum) {
-        emeraldNum = Math.floor((Math.random()*12)+1);  
+    if (sapphireNum === emeraldNum || sapphireNum === diamondNum) {
+        emeraldNum = Math.floor((Math.random()*12)+1); 
+        diamondNum = Math.floor((Math.random()*12)+1); 
+
+    }
+    if (emeraldNum === diamondNum) {
+        diamondNum = Math.floor((Math.random()*12)+1);
     }
     // resets the score and crystal hidden values
     var resetGame = function() {
@@ -28,6 +35,8 @@ $(document).ready(function() {
          sapphireNum = Math.floor((Math.random()*12)+1);
         
          emeraldNum = Math.floor((Math.random()*12)+1);
+
+        diamondNum = Math.floor((Math.random()*12)+1);
          
          randomNum = Math.floor((Math.random()*102)+19);
          $("#randomNum").html("<h3>Random Number: " + randomNum + "</h3>");
@@ -88,6 +97,25 @@ $(document).ready(function() {
             $("#losses").html("<h6>Losses: " + losses + "</h6>");
             resetGame();
         }  
+    });
+    // click function for diamond
+    $("#diamond").click(function(){
+        
+        score += diamondNum;
+        
+        $("#score").html("<h4>Your total score: " + score + "</h4>");
+        if (score === randomNum) {
+            wins++;
+            $("#wins").html("<h6>Wins: " + wins + "</h6>");
+            resetGame();
+            
+        }
+        if (score > randomNum) {
+            losses++;
+            $("#losses").html("<h6>Losses: " + losses + "</h6>");
+            resetGame();
+            
+        }
     });
 
 
